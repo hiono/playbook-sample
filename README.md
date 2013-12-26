@@ -1,9 +1,9 @@
 playbook-sample
 ===============
 
-## Install
+## Usage
 
-$ ansible-playbook -i <(curl -s https://raw.github.com/hiono/playbook-sample/master/localhost) <(curl -s https://raw.github.com/hiono/playbook-sample/master/sample.yml) -e dir=`pwd`
+$ ansible-playbook -i <(curl -s https://raw.github.com/hiono/playbook-sample/master/localhost) <(curl -s https://raw.github.com/hiono/playbook-sample/master/sample.yml) -e dir=$(pwd)
 
 ## License
 
