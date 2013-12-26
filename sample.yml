@@ -16,3 +16,23 @@
       - '{{ dir }}/roles/{{ role }}/templates'
       - '{{ dir }}/roles/{{ role }}/files'
       - '{{ dir }}/roles/{{ role }}/vars'
+
+  - name: create dummy files for ansible files.
+    command: touch {{ item }}
+    with_items:
+      - '{{ dir }}/site.yml'
+      - '{{ dir }}/group_vars/goroup1'
+      - '{{ dir }}/host_vars/hostname1'
+      - '{{ dir }}/roles/{{ role }}/tasks/main.yml'
+      - '{{ dir }}/roles/{{ role }}/defaults'
+      - '{{ dir }}/roles/{{ role }}/handlers/main.yml'
+      - '{{ dir }}/roles/{{ role }}/templates/ntp.conf.j2'
+      - '{{ dir }}/roles/{{ role }}/files/foo.txt'
+      - '{{ dir }}/roles/{{ role }}/files/bar.sh'
+      - '{{ dir }}/roles/{{ role }}/vars/main.yml'
+
+  - name: copy readme file.
+    copy: src=README_sample.md dest={{ dir }}/README.md mode=0644
+
+  - name: copy license file.
+    copy: src=LICENSE.txt dest={{ dir }}/LICENSE.txt mode=0644
