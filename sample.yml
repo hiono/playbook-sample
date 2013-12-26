@@ -32,7 +32,7 @@
       - '{{ dir }}/roles/{{ role }}/vars/main.yml'
 
   - name: copy readme file.
-    copy: src=README_sample.md dest={{ dir }}/README.md mode=0644
+    get_url: url=https://raw.github.com/hiono/playbook-sample/master/README_sample.md dest={{ dir }}/README.md mode=0644
 
   - name: copy license file.
-    copy: src=LICENSE.txt dest={{ dir }}/LICENSE.txt mode=0644
+    get_url: url=https://raw.github.com/hiono/playbook-sample/master/LICENSE.txt dest={{ dir }}/LICENSE.txt mode=0644

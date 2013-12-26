@@ -11,4 +11,4 @@ MIT License
 
 ## Original idea
 
-『 ansible-playbook ワンライナー - Qiita [キータ] http://qiita.com/yamasaki-masahide/items/fa96225815869daa9e53 』 
+『 ansible-playbook ワンライナー - Qiita [キータ] http://qiita.com/yamasaki-masahide/items/fa96225815869daa9e53 』
